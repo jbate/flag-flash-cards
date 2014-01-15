@@ -3,6 +3,8 @@ flag-test
 
 Guess the country from the flag shown.
 
+http://jbate.github.io/flag-test/
+
 How to use
 ----------
 
