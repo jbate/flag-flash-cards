@@ -36,8 +36,8 @@ $(function(){
         $("body")
         .html("<div>" + 
             countries[countryCode].Name + ": " + 
-            ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div><br />")
-        .append(flag);  
+            ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div>")
+        .append(flag);
     }
 
     // toggle the showing of answer
