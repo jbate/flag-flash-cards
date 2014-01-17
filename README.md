@@ -1,9 +1,11 @@
 flag-test
 =========
 
-Guess the country from the flag shown.
+It's simple. We show you the flag, you guess the country. 
 
-http://jbate.github.io/flag-test/
+Flash cards for budding vexillologists if you will.
+
+Try it out! http://jbate.github.io/flag-test/
 
 How to use
 ----------
