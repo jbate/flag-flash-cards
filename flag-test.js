@@ -34,8 +34,8 @@ $(function(){
 
         // Add to DOM
         $("body")
-        .html("<div>" + 
-            countries[countryCode].Name + ": " + 
+        .html("<div><h1>" + 
+            countries[countryCode].Name + "</h1> " + 
             ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div>")
         .append(flag);
     }
