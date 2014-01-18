@@ -34,10 +34,10 @@ $(function(){
 
         // Add to DOM
         $("body")
-        .html("<div>" + 
-            countries[countryCode].Name + ": " + 
-            ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div><br />")
-        .append(flag);  
+        .html("<div><h1>" + 
+            countries[countryCode].Name + "</h1> " + 
+            ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div>")
+        .append(flag);
     }
 
     // toggle the showing of answer
