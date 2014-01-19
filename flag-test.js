@@ -6,21 +6,10 @@ $(function(){
         countries = data.Results;
         countryCodes = Object.keys(countries); // get the country codes
         countryCodes.sort(function() { return 0.5 - Math.random() }); // shuffle
-        showFlag(getCountryCodeFromHash() || countryIndex); // show new flag test (either from hash or using index)
+        showFlag(getCountryCodeFromHash() || getCountryCodeFromIndex(countryIndex)); // show new flag test (either from hash or using index)
     });
 
     function showFlag(countryCode){
-        // If we don't have an index number, try the hash
-        if(isNaN(countryCode)){
-            countryCode = getCountryCodeFromHash();
-            // If we still don't have a countryCode, exit
-            if(!countryCode){
-                return false;
-            }
-        } else {
-            countryCode = getCountryCodeFromIndex(countryCode);
-        }
-        
         // Create flag
         var flag = $("<img/>", {
             "src": "svg/country-4x3/" + countryCode.toLowerCase() + ".svg"
@@ -29,7 +18,7 @@ $(function(){
             toggleInfo(); // show answer
         })
         .on("dblclick", function(){
-            showFlag(++countryIndex); // show new flag test
+            showFlag(getCountryCodeFromIndex(++countryIndex)); // show new flag test
         });
 
         // Add to DOM
@@ -60,10 +49,41 @@ $(function(){
         return false;
     };
 
+    // change flag using location.hash
+    var captureHashChange = function(event){
+        var countryCode = getCountryCodeFromHash();
+        // If we have a valid country code, show the flag
+        if(countryCode){
+            showFlag(countryCode);
+        }
+        return false;
+    };
+
+    // navigate with keyboard
+    var captureKeyboardShortcut = function(event){
+        if(event.which == 37/*left*/ || event.which == 39/*right*/) {
+            // set next index based on event
+            countryIndex = (event.which == 37) ? --countryIndex : ++countryIndex;
+            // reset if out of bounds
+            if(countryIndex < 0 || countryIndex > countryCodes.length){
+                countryIndex = 0;
+            }
+            // show the flag
+            showFlag(getCountryCodeFromIndex(countryIndex));
+        }
+    };
+
     if (window.addEventListener) {
-        window.addEventListener("hashchange", showFlag, false);
+        window.addEventListener("hashchange", captureHashChange, false);
     }
     else if (window.attachEvent) {
-        window.attachEvent("onhashchange", showFlag);
+        window.attachEvent("onhashchange", captureHashChange);
+    }
+
+    if (window.addEventListener) {
+        window.addEventListener("keydown", captureKeyboardShortcut, false);
+    }
+    else if (window.attachEvent) {
+        window.attachEvent("onkeydown", captureKeyboardShortcut);
     }
 });
