@@ -11,7 +11,7 @@ html {min-height: 101%;font-family: Redressed,'Helvetica Neue', Helvetica, Arial
 h1 {color: green;margin: .1em auto 0;font-size: 2em;font-family: Bree, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 img {height: 100%; width: 100%; position: absolute; top: 0; left: 0; transition: all 0.5s ease;}
 img.slide {top:50%;}
-div {font-size: 3em; position: absolute; left: -999px; transition: all 0.5s ease;}
+div {font-size: 3em; position: absolute; left: -9999px; transition: all 0.5s ease;}
 div.slide {left: 5%;}
 @media (max-width: 23.750em) {
 	div{font-size: 2em;}
