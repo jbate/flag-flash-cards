@@ -61,6 +61,7 @@ $(function(){
 
     // navigate with keyboard
     var captureKeyboardShortcut = function(event){
+        // left/right, show new flag
         if(event.which == 37/*left*/ || event.which == 39/*right*/) {
             // set next index based on event
             countryIndex = (event.which == 37) ? --countryIndex : ++countryIndex;
@@ -70,6 +71,10 @@ $(function(){
             }
             // show the flag
             showFlag(getCountryCodeFromIndex(countryIndex));
+        }
+        // up/down, toggle answer
+        if(event.which == 38/*up*/ || event.which == 40/*down*/) {
+            toggleInfo();
         }
     };
 
