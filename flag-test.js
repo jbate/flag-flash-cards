@@ -27,6 +27,26 @@ $(function(){
             countries[countryCode].Name + "</h1> " + 
             ((countries[countryCode].Capital) ? countries[countryCode].Capital.Name : "No Capital") + "</div>")
         .append(flag);
+
+        // After img added to DOM add the touch gesture support
+        var element = document.getElementsByTagName('img')[0];
+        var hammertime = Hammer(element)
+        .on("swipedown swipeup", function() {
+            toggleInfo(); // show answer
+        })
+        .on("doubletap", function() {
+            showFlag(getCountryCodeFromIndex(++countryIndex)); // show new flag test
+        })
+        .on("swipeleft", function(event){
+            // We're swiping to the left, so emulate a right keyboard button
+            event.which = 39;
+            captureKeyboardShortcut(event)
+        })
+        .on("swiperight", function(event){
+            // We're swiping to the right, so emulate a left keyboard button
+            event.which = 37;
+            captureKeyboardShortcut(event)
+        });
     }
 
     // toggle the showing of answer
