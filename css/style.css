@@ -1,10 +1,10 @@
 @font-face {
   font-family: Bree;
-  src: url('/fonts/BreeSerif_Reg.otf');
+  src: url('../fonts/BreeSerif_Reg.otf');
 }
 @font-face {
   font-family: Redressed;
-  src: url('/fonts/Redressed.ttf');
+  src: url('../fonts/Redressed.ttf');
 }
 
 html {min-height: 101%;font-family: Redressed,'Helvetica Neue', Helvetica, Arial, sans-serif;}
