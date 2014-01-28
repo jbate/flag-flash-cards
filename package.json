@@ -1,0 +1,30 @@
+{
+  "name": "flag-test",
+  "version": "1.2.0",
+  "description": "Randomly shows a flag for the user to guess",
+  "main": "flag-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbate/flag-test.git"
+  },
+  "keywords": [
+    "country",
+    "flags",
+    "test"
+  ],
+  "author": "James Bate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbate/flag-test/issues"
+  },
+  "homepage": "https://jbate.github.io/flag-test/",
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-uglify": "~0.2.0",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-clean": "~0.2.4"
+  }
+}
