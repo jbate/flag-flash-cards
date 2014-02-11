@@ -100,15 +100,10 @@ $(function(){
 
     if (window.addEventListener) {
         window.addEventListener("hashchange", captureHashChange, false);
-    }
-    else if (window.attachEvent) {
-        window.attachEvent("onhashchange", captureHashChange);
-    }
-
-    if (window.addEventListener) {
         window.addEventListener("keydown", captureKeyboardShortcut, false);
     }
     else if (window.attachEvent) {
+        window.attachEvent("onhashchange", captureHashChange);
         window.attachEvent("onkeydown", captureKeyboardShortcut);
     }
 });
