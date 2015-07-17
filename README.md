@@ -1,4 +1,4 @@
-flag-test
+Flash card flags
 =========
 It's simple. We show you the flag, you guess the country. 
 
