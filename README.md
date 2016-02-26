@@ -4,7 +4,7 @@ It's simple. We show you the flag, you guess the country.
 
 Flash cards for budding vexillologists if you will.
 
-Try it out! http://jbate.github.io/flag-test/
+Try it out! http://jbate.github.io/flag-flash-cards/
 
 How to use
 ----------
@@ -17,7 +17,7 @@ Extras
 ### Jump to a specific country
 Load a specific country's flag by appending their country code with a hash (`#`) to the URL.
 
-So to view the flag for the UK, do this: http://jbate.github.io/flag-test/#gb
+So to view the flag for the UK, do this: http://jbate.github.io/flag-flash-cards/#gb
 
 ### Keyboard navigation
 Use the &larr; and &rarr; keys to navigate to a new flag or back to a previous one.
